@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/icon-font.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        
+        <title>Natours | Exciting tours for adventurous people</title>
+    </head>
+    <body>
+
+        <!--Neste bloco de código HTML fiz uso da metodologia BEM para a criação de nomes para classes de folhas de estilo-->
+
+        <!--A estrutura BEM é simples:
+        .elementopai, 
+        .elementopai__filho, 
+        .elementopai__filho--primeiro
+        -->
+
+        <header class="header">
+            <!--
+            No caso da classe 'logo-box' abaixo ela não é um elemento autônomo, pois ela somente fará sentido se usada dentro do contexto da classe 'header'. Portanto, a classe 'header' será o elemento pai, enquanto a classe 'logo-box' será o elemento filho.
+            -->
+
+            <div class="header__logo-box">
+                <img src="img/logo-white.png" alt="logo" class="header__logo">
+            </div>
+
+            <div class="header__text-box">
+                <!--Já no caso da classe 'heading-primary' as coisas são um pouco diferentes. O uso dela é autônomo, não dependendo necessariamente da classe 'header'. A classe 'heading-primary' poderia muito bem ser usada fora da classe 'header' sem comprometer seu desempenho-->
+
+                <h1 class="heading-primary">
+                    <!--Nos elementos abaixo a classe 'main' e 'sub' são modificadores da classe 'heading-primary' então é necessário fazer o uso dos: '--', pois eles criam uma versão um pouco diferente da classe 'heading primary' -->
+
+                    <span class="heading-primary--main">Outdoors</span>
+        
+                    <span 
+                    class="heading-primary--sub">is where life happens</span>
+                </h1>
+
+                <a href="#" class="btn btn--white btn--animated">
+                    Discover our tours
+                </a>
+            </div>
+
+            
+        </header> 
+        
+        
+    </body>
+</html>
