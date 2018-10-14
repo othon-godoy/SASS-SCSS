@@ -1,0 +1,179 @@
+$color-primary: #7ed56f;
+$color-primary-light: #55c57a;
+$color-primary-dark: #28b485;
+
+$color-gray-dark: #777;
+
+$color-white: #fff;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lato", sans-serif; 
+    font-weight: 400; 
+    font-size: 16px;  
+    line-height: 1.7;
+    color: $color-gray-dark; 
+    padding: 30px;   
+}
+
+.header{
+    height: 95vh; /*a altura do elemento deve ser de 95% da altura da janela de visualização*/
+
+    background-image: linear-gradient(to right bottom, 
+    rgba($color-primary-light, 0.8), /*os 3 primeiros parametros são da cor e o ultimo '0.8' é referente a opacidade da cor*/
+
+    rgba($color-primary-dark, 0.8)) , 
+    url(../img/hero.jpg);
+
+    background-size: cover; /*qualquer que seja o tamanho da viewport o cover tentará encaixar a imagem dentro da caixa*/
+
+    background-position: top; /*faz com que o topo da imagem seja sempre exibida independente do tamanho da viewport*/
+
+    position: relative; /*a posição do header deverá ser relativa pois ela servirá de referência para iniciar a contagem de 40px da class .logo-box*/
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.header__logo{
+    height: 35px;    
+}
+
+.header__text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);/*top e left estão relacionados ao elemento pai, O elemento pai é o body e usando apenas esses comandos o text-box irá iniciar com o a ponta da caixa no meio da tela, e não o centro da caixa. Já usando o transform e o translate o -50% agora não está mais relacionado ao elemento pai, mas sim ao próprio elemento.*/
+    text-align: center;
+}
+
+.heading-primary{
+    color: $color-white;    
+    text-transform: uppercase;
+    backface-visibility: hidden; /*algumas animações possuem um problema que ao final da execuçao realizam um reposicionamento do elemento em um local ligeiramente diferente, mas que é o suficiente para causar um incômodo aos olhos*/
+    margin-bottom: 60px;
+}
+
+.heading-primary--main{
+    display: block; /*o display block será usado para que o elemento ocupe todo o espaço disponível e em seguida crie quebras de linhas antes e depois deles*/
+
+    font-size: 60px;
+    font-weight: 400;/*peso da fonte é definido pela API de fonte usada do Google*/
+
+    letter-spacing: 35px;/*espaçamento entre as letras*/
+
+    animation-name: moveInLeft;
+    animation-duration: 1.5s;
+
+    animation-timing-function: ease-out; /*define que a animação começará rápido e terminará devagar*/
+
+    /*
+    animation-iteration-count: 3; animação ocorre 3x
+    animation-delay: 3s;
+    */ 
+}
+
+.heading-primary--sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.5px;
+
+    animation-name: moveInRight;
+    animation-duration: 1.5s;    
+    animation-timing-function: ease-out;    
+}
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    /*
+    80%{
+        transform: translateX(10px);
+        /* esse efeito faria com que o titulo outdoors fosse um pouco a frente do que é a sua posição 0 e depois retornasse, como se ele tivesse ido além de onde deveria parar e depois precisou voltar
+    }
+    */
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    /*
+    80%{
+        transform: translateX(10px);
+        /* esse efeito faria com que o titulo outdoors fosse um pouco a frente do que a sua posição 0 e depois retornasse, como se ele tivesse ido além de onde deveria parar e depois precisou voltar
+    }
+    */
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }   
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+/*link é uma pseudo-classe e pseudo-classes são um estado especial do seletor. Por tanto, esse link é um estado do seletor do tipo button*/
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;    
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn--white{
+    background-color: $color-white;
+    color: $color-gray-dark;
+}
+
+.btn--animated{
+    animation: moveInBottom .9s ease-out .5s;    
+    animation-fill-mode: backwards;
+}
