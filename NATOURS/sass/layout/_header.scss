@@ -1,0 +1,35 @@
+.header{
+    height: 95vh; /*a altura do elemento deve ser de 95% da altura da janela de visualização*/
+
+    background-image: linear-gradient(to right bottom, 
+    rgba($color-primary-light, 0.8), /*os 3 primeiros parametros são da cor e o ultimo '0.8' é referente a opacidade da cor*/
+
+    rgba($color-primary-dark, 0.8)) , 
+    url(../img/hero.jpg);
+
+    background-size: cover; /*qualquer que seja o tamanho da viewport o cover tentará encaixar a imagem dentro da caixa*/
+
+    background-position: top; /*faz com que o topo da imagem seja sempre exibida independente do tamanho da viewport*/
+
+    position: relative; /*a posição do header deverá ser relativa pois ela servirá de referência para iniciar a contagem de 40px da class .logo-box*/
+
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    &__logo{
+        height: 35px;    
+    }
+
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);/*top e left estão relacionados ao elemento pai, O elemento pai é o body e usando apenas esses comandos o text-box irá iniciar com o a ponta da caixa no meio da tela, e não o centro da caixa. Já usando o transform e o translate o -50% agora não está mais relacionado ao elemento pai, mas sim ao próprio elemento.*/
+        text-align: center;
+    }
+}

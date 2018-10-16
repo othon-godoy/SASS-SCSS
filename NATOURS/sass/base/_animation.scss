@@ -1,0 +1,49 @@
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    /*
+    80%{
+        transform: translateX(10px);
+        /* esse efeito faria com que o titulo outdoors fosse um pouco a frente do que é a sua posição 0 e depois retornasse, como se ele tivesse ido além de onde deveria parar e depois precisou voltar
+    }
+    */
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    /*
+    80%{
+        transform: translateX(10px);
+        /* esse efeito faria com que o titulo outdoors fosse um pouco a frente do que a sua posição 0 e depois retornasse, como se ele tivesse ido além de onde deveria parar e depois precisou voltar
+    }
+    */
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }   
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
