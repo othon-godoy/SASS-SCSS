@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*O CSS tem algumas propriedades que possuem 'namespaces', por exemplo:
+font-family, font-size, font-weight, etc. 
+
+Para facilitar na escrita do código o Sass fornece um atalho para isso: basta escrever o namespace uma vez e depois aninhar cada uma das subpropriedades dentro dele.*/
+.funky {
+  font-family: fantasy;
+  font-size: 30em;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */

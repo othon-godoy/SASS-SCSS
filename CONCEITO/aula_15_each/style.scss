@@ -1,0 +1,25 @@
+/*Possui a mesma lógica do foreach em linguagens de programação, percorrendo vetores ou, no caso do Sass, listas e maps*/
+
+@each $animal in puma, sea-slug, egret, salamander{
+    .#{$animal}-icon{
+        background-image: url('/images/#{$animal}.png');
+    }
+}
+
+/*Também é possível realizar uma atribuição multipla*/
+
+@each $animal, $color, $cursor in (puma, black, default),(sea-slug, blue, pointer),(egret, white, move){
+    .#{$animal}-icon{
+        background-image: url('/images/#{$animal}.png');
+        border: 2px solid $color;
+        cursor: $cursor;
+    }
+}
+
+/*Como os mapas são tratados como listas de pares, a atribuição multipla também funciona com eles*/
+
+@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+    #{$header}{
+        font-size: $size;
+    }
+}

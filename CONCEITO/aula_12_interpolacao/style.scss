@@ -1,0 +1,7 @@
+/*A interpolação é muito útil no momento de nomear seletores e propriedades*/
+
+$name: foo;
+$attr: border;
+p.#{$name}{
+    #{$attr}-color: blue;
+}

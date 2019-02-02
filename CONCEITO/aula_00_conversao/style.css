@@ -1,0 +1,12 @@
+/*Sass to SCSS*/
+/*sass-convert style.sass style.scss*/
+/*SCSS to Sass*/
+/*sass-convert style.scss style.sass*/
+h1 {
+  color: red;
+  background-color: white;
+}
+
+/*# sourceMappingURL=style.scss.map */
+
+/*# sourceMappingURL=style.css.map */

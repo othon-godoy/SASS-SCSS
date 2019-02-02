@@ -1,0 +1,10 @@
+/*O Sass pode assistir a um arquivo e atualizar o CSS toda vez que o arquivo Sass for alterado*/
+/*sass --watch style.scss:style.css*/
+/*sass --watch style.sass:style.css*/
+h1 {
+  color: red;
+  background-color: white;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.scss.map */

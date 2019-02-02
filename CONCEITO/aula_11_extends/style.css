@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/*Muitas vezes se cria uma classe que deve herdar todos os estilos de outra classe mais seus próprios estilos específicos.*/
+.error, .seriousError {
+  border: 1px solid red;
+  background-color: white;
+}
+
+.seriousError {
+  border-width: 3px;
+}
+
+/*ao utilizar*/
+/*
+<div class="error seriousError">
+    You've been hacked
+</div>
+*/
+/*Já com o Sass*/
+.error, .seriousError {
+  border: 1px solid red;
+  background-color: white;
+}
+
+.seriousError {
+  border-width: 3px;
+}
+
+/*# sourceMappingURL=style.css.map */

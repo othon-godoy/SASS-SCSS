@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/*Mixins permitem a definição de estilos que podem ser reutilizados em toda a folha de estilo sem precisar recorrer a classes não semênticas como .float-left*/
+.page-title {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: blue;
+  padding: 4px;
+  margin-top: 10px;
+}
+
+/*Mixins podem usar valores SassScript como argumentos, que são informados quando o mixin é incluído*/
+p {
+  border-color: blue;
+  border-width: 1in;
+  border-style: dashed;
+}
+
+/*Mixins permitem a inserção de argumentos variáveis, pois ocasionalmente faz sentido definir uma função com um número desconhecido de argumentos*/
+.shadows {
+  -moz-box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
+  -webkit-box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
+  box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
+}
+
+/*# sourceMappingURL=style.css.map */

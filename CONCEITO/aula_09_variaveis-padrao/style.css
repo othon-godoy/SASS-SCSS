@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/*O sinalizador !default adicionado ao final de uma variável significa que se ela já tiver atribuida, ela não será reatribuída, mas se ainda não tiver um valor, receberá um*/
+#main {
+  content: "First Content";
+  new-content: "First time reference";
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+/*O Sass suporta as operações matemáticas padrão: adição, subtração, multiplicação, divisão e módulo. Ao realizar operações matemáticas, os valores devem estar em variáveis, funções ou entre parenteses e possuirem a mesma unidade. Por exemplo: px, em*/
+
+p{
+    font: 10px/8px; //no division
+    $width: 1000px;
+    width: $width/2;
+    width: round(1.5)/2;
+    height: (500px/2);
+    margin-left: 5px + 8px/2px;    
+}

@@ -1,0 +1,10 @@
+/*O sinalizador !default adicionado ao final de uma variável significa que se ela já tiver atribuida, ela não será reatribuída, mas se ainda não tiver um valor, receberá um*/
+
+$content: "First Content";
+$content: "Second content?" !default;
+$new_content: "First time reference" !default;
+
+#main{
+    content: $content;
+    new-content: $new_content;    
+}

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/*A maneira mais simples de usar o SassScript é usar variáveis. As variáveis começam com cifrões e são definidas como propriedade CSS*/
+#main {
+  width: 5em;
+}
+
+/*As variáveis do SassScript, assim como as do JavaScript, respeitam o escopo de onde foram inseridas ou criadas*/
+
+/*# sourceMappingURL=style.css.map */

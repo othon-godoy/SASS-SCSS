@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/*A interpolação é muito útil no momento de nomear seletores e propriedades*/
+p.foo {
+  border-color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+/*O Sass permite substituir o seletor pai pelo caractere &, facilitando na escrita e organização de codigo*/
+
+a{
+    font-weight: bold;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+    body.firefox &{
+        font-weight: normal;
+    }
+}
+
+/*O caractere & deve aparecer no início de um seletor composto, mas pode ser seguido por um sufixo*/
+
+#main{
+    color: black;
+    &-sidebar{
+        border: 1px solid;
+    }
+}

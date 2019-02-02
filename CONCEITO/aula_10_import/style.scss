@@ -1,0 +1,19 @@
+/*Ao importar arquivos.sass ou arquivos.scss o é possível utilizar no diretório principal recursos do diretório importado*/
+
+@import "test.scss";
+
+/*ou*/
+
+@import "test";
+
+/*Também é possível importar vários arquivos  em um @import*/
+
+@import "test.scss", "test1.scss";
+
+/*ou*/
+
+@import "test", "test1";
+
+/*Também é possível importar arquivos.sass ou arquivos.scss sem compila-los para um arquivo.css, basta adicionar um _ ao início do nome*/
+
+@import "_test.scss";
